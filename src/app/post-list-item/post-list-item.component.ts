@@ -9,16 +9,19 @@ import { Post } from 'src/app/models/post';
 
 export class PostlistitemComponent implements OnInit {
 
-  @Input() posts: Post;
+  @Input() title: string;
+  @Input() content: string;
+  @Input() loveIts: number;
+  @Input() created_at: Date;
 
   constructor() { }
   ngOnInit() { }
 
-  onLoveIt(i: number, loveIts: number) {
-    this.posts[i].loveIts = loveIts + 1;
+  onLoveIt() {
+    this.loveIts = this.loveIts + 1;
   }
-  onDontLoveIt(i: number, loveIts: number) {
-    this.posts[i].loveIts = loveIts - 1;
+  onDontLoveIt() {
+    this.loveIts = this.loveIts - 1;
   }
 
 }

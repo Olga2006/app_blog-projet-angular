@@ -1,9 +1,0 @@
-<li *ngFor="let post of posts; let i = index" [ngClass]="{'list-group-item': true,
-                'list-group-item-success': post.loveIts > 0,
-                'list-group-item-danger': (post.loveIts < 0)}">
-<h4 class="text-right" style="margin: 0px; font-style: italic;"><small>{{ post.createdAt | date: 'short' }}</small></h4>
-    <h4> {{post.title}} </h4>
-    <h5> {{post.content}}</h5>
-    <button type="button" style="margin-right:7px;" class="btn btn-success" (click)="onLoveIt(i, post.loveIts)">Love it!</button>
-    <button type="button" class="btn btn-danger" (click)="onDontLoveIt(i, post.loveIts)">Don't Love it!</button>
-</li>
