@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <form (ngSubmit)="onSubmit(for)" #for="ngForm">
+      <div class="form-group">
+        <label for="title">
+          Titre
+        </label>
+        <input type="text" id="title" class="form-control" name="title" ngModel required>
+      </div>
+      <div class="form-group">
+        <label for="content">
+          Contenu
+        </label>
+       
+        <textarea rows="5" id="content" class="form-control" name="content" ngModel required></textarea>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit" [disabled]="for.invalid">Enregistrer</button>
+         </div>
+    </form>
+ 
+</div>
